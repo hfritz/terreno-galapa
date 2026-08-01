@@ -39,47 +39,51 @@ const specs = [
 
 export function PropertySpecs() {
   return (
-    <section id="especificaciones" className="bg-muted">
-      <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
-        <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
-          Especificaciones del terreno
-        </h2>
+    <>
+      <section id="especificaciones" className="bg-muted">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+          <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
+            Especificaciones del terreno
+          </h2>
 
-        <dl className="mt-12 divide-y divide-border border-t border-border">
-          {specs.map((spec) => (
-            <div
-              key={spec.label}
-              className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
-            >
-              <dt className="text-sm text-muted-foreground">{spec.label}</dt>
-              <dd className="text-lg font-medium text-foreground sm:text-right">
-                {spec.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-
-        <div className="mt-16">
-          <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
-          <div className="mt-6 grid gap-10 sm:grid-cols-3">
-            {usos.map((uso) => (
-              <div key={uso.label}>
-                <uso.icon
-                  className="size-6 text-accent-warm"
-                  strokeWidth={1.5}
-                />
-                <p className="mt-4 text-xl font-medium text-foreground">
-                  {uso.label}
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {uso.description}
-                </p>
+          <dl className="mt-12 divide-y divide-border border-t border-border">
+            {specs.map((spec) => (
+              <div
+                key={spec.label}
+                className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+              >
+                <dt className="text-sm text-muted-foreground">{spec.label}</dt>
+                <dd className="text-lg font-medium text-foreground sm:text-right">
+                  {spec.value}
+                </dd>
               </div>
             ))}
+          </dl>
+
+          <div className="mt-16">
+            <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
+            <div className="mt-6 grid gap-10 sm:grid-cols-3">
+              {usos.map((uso) => (
+                <div key={uso.label}>
+                  <uso.icon
+                    className="size-6 text-accent-warm"
+                    strokeWidth={1.5}
+                  />
+                  <p className="mt-4 text-xl font-medium text-foreground">
+                    {uso.label}
+                  </p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {uso.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-16">
+      <section className="bg-background">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
           <h3 className="text-sm text-muted-foreground">
             Ventajas del terreno
           </h3>
@@ -100,7 +104,7 @@ export function PropertySpecs() {
             })}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
