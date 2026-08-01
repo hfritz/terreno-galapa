@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Mail, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { property } from "@/lib/property";
 
@@ -27,6 +27,7 @@ export function Contact() {
               <a href={`tel:${property.contacto.telefono.replace(/\s/g, "")}`} />
             }
           >
+            <Phone className="size-4" strokeWidth={1.5} />
             Llamar {property.contacto.telefono}
           </Button>
           <Button
@@ -41,6 +42,7 @@ export function Contact() {
               />
             }
           >
+            <MessageCircle className="size-4" strokeWidth={1.5} />
             WhatsApp
           </Button>
           <Button
@@ -49,6 +51,7 @@ export function Contact() {
             className="w-full sm:w-auto"
             render={<a href={`mailto:${property.contacto.email}`} />}
           >
+            <Mail className="size-4" strokeWidth={1.5} />
             {property.contacto.email}
           </Button>
         </div>

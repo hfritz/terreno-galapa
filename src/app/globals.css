@@ -145,14 +145,16 @@
 }
 
 .glow-border {
-  background: conic-gradient(
-    from var(--border-angle),
-    transparent 0deg,
-    var(--accent-warm) 60deg,
-    transparent 120deg,
-    transparent 240deg,
-    var(--accent) 300deg,
-    transparent 360deg
-  );
+  border: 2px solid;
+  border-image: conic-gradient(
+      from var(--border-angle),
+      transparent 0deg,
+      var(--accent-warm) 60deg,
+      transparent 120deg,
+      transparent 240deg,
+      var(--accent) 300deg,
+      transparent 360deg
+    )
+    1;
   animation: rotate-glow 4s linear infinite;
 }
