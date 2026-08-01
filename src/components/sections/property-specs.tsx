@@ -1,4 +1,13 @@
-import { Blend, Factory, Warehouse } from "lucide-react";
+import {
+  Blend,
+  Building2,
+  Factory,
+  FileCheck2,
+  Route,
+  TrendingUp,
+  Truck,
+  Warehouse,
+} from "lucide-react";
 import { property } from "@/lib/property";
 
 const usos = [
@@ -18,6 +27,8 @@ const usos = [
     icon: Blend,
   },
 ];
+
+const ventajaIcons = [Route, Building2, TrendingUp, Truck, FileCheck2];
 
 const specs = [
   { label: "Área total", value: `${property.areaHectareas} hectáreas (${property.areaM2.toLocaleString("es-CO")} m²)` },
@@ -68,15 +79,26 @@ export function PropertySpecs() {
           </div>
         </div>
 
-        <div className="mt-16 max-w-2xl">
+        <div className="mt-16">
           <h3 className="text-sm text-muted-foreground">
             Ventajas del terreno
           </h3>
-          <ul className="mt-2 space-y-3 text-lg leading-relaxed text-foreground">
-            {property.ventajas.map((ventaja) => (
-              <li key={ventaja}>{ventaja}</li>
-            ))}
-          </ul>
+          <div className="mt-6 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            {property.ventajas.map((ventaja, i) => {
+              const Icon = ventajaIcons[i];
+              return (
+                <div key={ventaja} className="flex items-start gap-4">
+                  <Icon
+                    className="mt-0.5 size-5 shrink-0 text-accent-warm"
+                    strokeWidth={1.5}
+                  />
+                  <p className="text-lg leading-snug text-foreground">
+                    {ventaja}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
