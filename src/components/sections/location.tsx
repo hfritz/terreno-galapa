@@ -3,7 +3,7 @@ import { property } from "@/lib/property";
 
 export function Location() {
   return (
-    <section className="bg-secondary">
+    <section id="ubicacion" className="bg-secondary">
       <div className="grid sm:grid-cols-2">
         <div className="relative min-h-[420px] sm:min-h-[640px]">
           <Image

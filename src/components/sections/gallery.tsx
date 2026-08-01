@@ -21,7 +21,7 @@ const photos = [
 
 export function Gallery() {
   return (
-    <section className="bg-muted">
+    <section id="fotos" className="bg-muted">
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
         <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
           Fotos del terreno

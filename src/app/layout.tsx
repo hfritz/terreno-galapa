@@ -23,13 +23,13 @@ export default function RootLayout({
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-border bg-background py-8 text-center text-sm text-muted-foreground">
+        <footer className="border-t border-border bg-background py-4 text-center text-xs text-muted-foreground">
           Construido por{" "}
           <a
             href="https://helmutfritz.fyi/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-foreground underline-offset-4 hover:underline"
+            className="text-muted-foreground underline-offset-4 hover:underline hover:text-foreground"
           >
             Helmut Fritz
           </a>

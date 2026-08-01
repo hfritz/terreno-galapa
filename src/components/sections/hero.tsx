@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Nav } from "@/components/nav";
 import { Button } from "@/components/ui/button";
 import { property } from "@/lib/property";
 
@@ -6,6 +7,7 @@ export function Hero() {
   return (
     <section className="bg-background">
       <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9]">
+        <Nav />
         <video
           className="h-full w-full object-cover"
           src="/video/terreno-aereo.mp4"
