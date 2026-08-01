@@ -20,7 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="es"
+      className={`${inter.variable} h-full scroll-smooth antialiased`}
+    >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <main className="flex-1">{children}</main>
         <footer className="border-t border-border bg-background py-4 text-center text-xs text-muted-foreground">
