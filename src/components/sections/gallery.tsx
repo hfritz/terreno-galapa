@@ -21,17 +21,14 @@ const photos = [
 
 export function Gallery() {
   return (
-    <section className="border-b border-border bg-muted">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+    <section className="bg-muted">
+      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+        <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
           Fotos del terreno
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
           {photos.map((photo) => (
-            <figure
-              key={photo.src}
-              className="overflow-hidden rounded-lg border border-border"
-            >
+            <figure key={photo.src}>
               <div className="relative aspect-[4/3]">
                 <Image
                   src={photo.src}
@@ -40,14 +37,14 @@ export function Gallery() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="bg-card px-4 py-3 text-sm text-card-foreground">
+              <figcaption className="mt-3 text-sm text-muted-foreground">
                 {photo.label}
               </figcaption>
             </figure>
           ))}
           <ImagePlaceholder
             label="Vista aérea del terreno (pendiente)"
-            className="aspect-[4/3] rounded-lg"
+            className="aspect-[4/3]"
           />
         </div>
       </div>

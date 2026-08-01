@@ -55,20 +55,18 @@ All colors warm and earthy, consistent with the land/nature subject. No pure bla
 
 ## Elevation & Depth
 
-- Minimal use of shadow. Prefer flat color blocks and borders over drop shadows.
-- Where needed (e.g. a floating contact card), use a soft, warm shadow: `0 4px 24px rgba(43, 42, 37, 0.08)` — never harsh black shadows.
+- No shadows, anywhere. Depth and separation come from background color blocks and whitespace, never drop shadows.
 
 ## Border Radius
 
-- Cards/panels: 8–12px.
-- Buttons: 6–8px (soft, not pill-shaped, not sharp).
-- Images: 8px, or full-bleed with no radius in hero contexts.
+- Sharp corners throughout — 0px radius on all buttons, images, and content blocks, matching the Aesop reference exactly.
 
 ## Buttons
 
-- **Primary:** background `#5C6B4F` (accent), text `#FAF7F1` (background), hover → `#454F3B` (accent-dark).
-- **Secondary:** transparent background, 1px border `#5C6B4F`, text `#5C6B4F`, hover → filled `#F1ECE1` (surface).
-- **Ghost:** no border, text `#5E5A4E` (text-secondary), underline on hover.
+- All buttons are 1px-bordered rectangles with a transparent background — never a filled saturated-color block, never pill-shaped.
+- **Primary:** border and text `#5C6B4F` (accent), hover → inverts to filled `#5C6B4F` background with `#FAF7F1` (background) text.
+- **Secondary:** thin neutral border (`text-foreground` at low opacity), transparent background, hover → border solidifies to full `text-foreground`.
+- **Ghost / inline:** no border, no background, text only, underline on hover — used for inline links and tertiary CTAs, optionally with a trailing arrow icon.
 - Keep CTA copy calm and direct in Spanish (e.g. "Contactar", "Ver más"), never urgency-driven ("¡Compre ya!").
 
 ## Gradients & Decorative Elements
@@ -79,8 +77,9 @@ All colors warm and earthy, consistent with the land/nature subject. No pure bla
 
 ## Cards
 
-- **Standard card:** `surface` background, 1px `border`, 8–12px radius, 24–32px internal padding. Used for spec/data groupings (e.g. área total, frente, clasificación).
-- **Feature card:** larger format, may include an image (e.g. plot aerial view) with caption below, used for key property highlights (location, potential uses).
+- No boxed/bordered cards. Content blocks are flat — separated by background-color changes (e.g. `background` → `muted` → `secondary` between sections) and generous whitespace, not by borders or fill.
+- Where a grouping needs internal separation (e.g. a spec list, a distances list), use a single hairline top border plus hairline dividers between rows — never a filled box around the group.
+- Images run full-bleed or edge-to-edge within their grid cell — no border, no radius, no drop shadow. Captions sit as plain text directly below the image, not in a boxed strip.
 
 ## Iconography
 

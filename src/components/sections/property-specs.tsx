@@ -9,54 +9,40 @@ const specs = [
 
 export function PropertySpecs() {
   return (
-    <section className="border-b border-border bg-muted">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+    <section className="bg-muted">
+      <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+        <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
           Especificaciones del terreno
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
+
+        <dl className="mt-12 divide-y divide-border border-t border-border">
           {specs.map((spec) => (
-            <div key={spec.label} className="bg-card p-6">
+            <div
+              key={spec.label}
+              className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+            >
               <dt className="text-sm text-muted-foreground">{spec.label}</dt>
-              <dd className="mt-1 text-lg font-medium text-card-foreground">
+              <dd className="text-lg font-medium text-foreground sm:text-right">
                 {spec.value}
               </dd>
             </div>
           ))}
+        </dl>
+
+        <div className="mt-16 max-w-2xl">
+          <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
+          <p className="mt-2 text-xl text-foreground">
+            {property.usosPotenciales.join(" · ")}
+          </p>
         </div>
 
-        <div className="mt-12">
-          <h3 className="text-lg font-medium text-foreground">
-            Usos potenciales
-          </h3>
-          <ul className="mt-4 flex flex-wrap gap-3">
-            {property.usosPotenciales.map((uso) => (
-              <li
-                key={uso}
-                className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-card-foreground"
-              >
-                {uso}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-12">
-          <h3 className="text-lg font-medium text-foreground">
+        <div className="mt-16 max-w-2xl">
+          <h3 className="text-sm text-muted-foreground">
             Ventajas del terreno
           </h3>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-2 space-y-3 text-lg leading-relaxed text-foreground">
             {property.ventajas.map((ventaja) => (
-              <li
-                key={ventaja}
-                className="flex items-start gap-3 text-muted-foreground"
-              >
-                <span
-                  aria-hidden
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-                />
-                {ventaja}
-              </li>
+              <li key={ventaja}>{ventaja}</li>
             ))}
           </ul>
         </div>
