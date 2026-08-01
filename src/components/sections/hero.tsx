@@ -5,10 +5,10 @@ import { property } from "@/lib/property";
 
 export function Hero() {
   return (
-    <section className="relative aspect-[4/3] w-full overflow-hidden bg-background sm:aspect-[16/9]">
+    <section className="relative flex min-h-[560px] w-full flex-col overflow-hidden bg-background sm:aspect-[16/9] sm:min-h-0">
       <Nav />
       <video
-        className="h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
         src="/video/terreno-aereo.mp4"
         autoPlay
         muted
@@ -17,7 +17,7 @@ export function Hero() {
         aria-label="Vista aérea del terreno en Galapa, Atlántico"
       />
       <div className="pointer-events-none absolute inset-0 bg-black/20" />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-40 pb-12 sm:pb-16">
+      <div className="relative mt-auto bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-40 pb-12 sm:pb-16">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 text-center">
           <p className="text-sm text-white/80">
             {property.ubicacion.municipio}, {property.ubicacion.departamento}
