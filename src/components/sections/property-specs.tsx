@@ -59,25 +59,27 @@ export function PropertySpecs() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
 
-          <div className="mt-16">
-            <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
-            <div className="mt-6 grid gap-10 sm:grid-cols-3">
-              {usos.map((uso) => (
-                <div key={uso.label}>
-                  <uso.icon
-                    className="size-6 text-accent-warm"
-                    strokeWidth={1.5}
-                  />
-                  <p className="mt-4 text-xl font-medium text-foreground">
-                    {uso.label}
-                  </p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {uso.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+      <section className="bg-secondary">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+          <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
+          <div className="mt-6 grid gap-10 sm:grid-cols-3">
+            {usos.map((uso) => (
+              <div key={uso.label}>
+                <uso.icon
+                  className="size-6 text-accent-warm"
+                  strokeWidth={1.5}
+                />
+                <p className="mt-4 text-xl font-medium text-foreground">
+                  {uso.label}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {uso.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
