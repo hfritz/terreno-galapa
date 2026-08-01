@@ -1,12 +1,10 @@
+import Image from "next/image";
 import {
-  Blend,
   Building2,
-  Factory,
   FileCheck2,
   Route,
   TrendingUp,
   Truck,
-  Warehouse,
 } from "lucide-react";
 import { property } from "@/lib/property";
 
@@ -14,17 +12,17 @@ const usos = [
   {
     label: property.usosPotenciales[0],
     description: "Centros de distribución y almacenamiento a gran escala.",
-    icon: Warehouse,
+    image: "/images/usos/parques-logisticos.jpg",
   },
   {
     label: property.usosPotenciales[1],
     description: "Infraestructura para operaciones industriales y manufactura.",
-    icon: Factory,
+    image: "/images/usos/bodegas-industriales.jpg",
   },
   {
     label: property.usosPotenciales[2],
     description: "Flexibilidad para proyectos que combinan usos comerciales y residenciales.",
-    icon: Blend,
+    image: "/images/usos/desarrollo-mixto.jpg",
   },
 ];
 
@@ -65,14 +63,21 @@ export function PropertySpecs() {
       <section className="bg-secondary">
         <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
           <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
-          <div className="mt-6 grid gap-10 sm:grid-cols-3">
+          <div className="mt-6 grid gap-x-8 gap-y-12 sm:grid-cols-3">
             {usos.map((uso) => (
               <div key={uso.label}>
-                <uso.icon
-                  className="size-6 text-accent-warm"
-                  strokeWidth={1.5}
-                />
-                <p className="mt-4 text-xl font-medium text-foreground">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={uso.image}
+                    alt={uso.label}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-5 text-xs text-muted-foreground">
+                  Uso potencial
+                </p>
+                <p className="mt-2 text-xl font-medium text-foreground">
                   {uso.label}
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">

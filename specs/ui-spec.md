@@ -105,4 +105,4 @@ All colors warm and earthy, consistent with the land/nature subject. No pure bla
 - Not dense, icon-grid-heavy, or triangle/gradient-decorated like the source brochure.
 - Not urgency-driven sales copy ("¡Invierta ahora!", "oportunidad única" repetido).
 - Not dark mode, not high-contrast bold-modern.
-- Not generic stock-photo real estate template — visuals should come from the actual property (aerial/satellite imagery, road access photos).
+- Not generic stock-photo real estate template as the site's primary visual identity — core property visuals (hero, location, gallery) must come from the actual property (aerial/satellite imagery, road access photos). Exception: tasteful editorial stock photography is permitted for abstract concept cards with no corresponding real-property photo (e.g. "Usos potenciales" categories like logistics parks or industrial warehouses) — warm-neutral and editorial in tone, not generic corporate real-estate stock.
