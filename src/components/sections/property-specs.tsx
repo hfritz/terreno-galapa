@@ -1,4 +1,23 @@
+import { Blend, Factory, Warehouse } from "lucide-react";
 import { property } from "@/lib/property";
+
+const usos = [
+  {
+    label: property.usosPotenciales[0],
+    description: "Centros de distribución y almacenamiento a gran escala.",
+    icon: Warehouse,
+  },
+  {
+    label: property.usosPotenciales[1],
+    description: "Infraestructura para operaciones industriales y manufactura.",
+    icon: Factory,
+  },
+  {
+    label: property.usosPotenciales[2],
+    description: "Flexibilidad para proyectos que combinan usos comerciales y residenciales.",
+    icon: Blend,
+  },
+];
 
 const specs = [
   { label: "Área total", value: `${property.areaHectareas} hectáreas (${property.areaM2.toLocaleString("es-CO")} m²)` },
@@ -29,11 +48,24 @@ export function PropertySpecs() {
           ))}
         </dl>
 
-        <div className="mt-16 max-w-2xl">
+        <div className="mt-16">
           <h3 className="text-sm text-muted-foreground">Usos potenciales</h3>
-          <p className="mt-2 text-xl text-foreground">
-            {property.usosPotenciales.join(" · ")}
-          </p>
+          <div className="mt-6 grid gap-10 sm:grid-cols-3">
+            {usos.map((uso) => (
+              <div key={uso.label}>
+                <uso.icon
+                  className="size-6 text-accent-warm"
+                  strokeWidth={1.5}
+                />
+                <p className="mt-4 text-xl font-medium text-foreground">
+                  {uso.label}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {uso.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 max-w-2xl">
