@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { BackToTop } from "@/components/back-to-top";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,7 +26,9 @@ export default function RootLayout({
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <main className="flex-1">{children}</main>
+        <main id="top" className="flex-1">
+          {children}
+        </main>
         <footer className="border-t border-border bg-background py-4 text-center text-xs text-muted-foreground">
           Construido por{" "}
           <a
@@ -37,6 +40,7 @@ export default function RootLayout({
             Helmut Fritz
           </a>
         </footer>
+        <BackToTop />
       </body>
     </html>
   );

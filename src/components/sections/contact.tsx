@@ -1,3 +1,4 @@
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { property } from "@/lib/property";
 
@@ -51,6 +52,15 @@ export function Contact() {
             {property.contacto.email}
           </Button>
         </div>
+
+        <a
+          href="/docs/brochure-terreno-galapa.pdf"
+          download
+          className="mt-8 inline-flex items-center gap-2 text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+        >
+          <Download className="size-4" strokeWidth={1.5} />
+          Descargar brochure (PDF)
+        </a>
       </div>
     </section>
   );
