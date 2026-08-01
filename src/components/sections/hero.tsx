@@ -5,7 +5,7 @@ import { property } from "@/lib/property";
 
 export function Hero() {
   return (
-    <section className="relative aspect-[4/5] w-full overflow-hidden bg-background sm:aspect-[16/9]">
+    <section className="relative aspect-[4/3] w-full overflow-hidden bg-background sm:aspect-[16/9]">
       <Nav />
       <video
         className="h-full w-full object-cover"
