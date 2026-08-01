@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/image-placeholder";
+import Image from "next/image";
 import { property } from "@/lib/property";
 
 export function Location() {
@@ -31,10 +31,14 @@ export function Location() {
           </dl>
         </div>
 
-        <ImagePlaceholder
-          label="Mapa / vista satelital (pendiente)"
-          className="min-h-[320px] rounded-lg"
-        />
+        <div className="relative min-h-[320px] overflow-hidden rounded-lg border border-border">
+          <Image
+            src="/images/mapa-regional.png"
+            alt="Mapa regional mostrando la ubicación de Galapa respecto a Barranquilla y Soledad"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </section>
   );

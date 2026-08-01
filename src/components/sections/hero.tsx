@@ -1,10 +1,9 @@
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { property } from "@/lib/property";
 
 export function Hero() {
   return (
     <section className="border-b border-border bg-background">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-24 text-center sm:py-32">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 pt-24 pb-16 text-center sm:pt-32">
         <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
           {property.ubicacion.municipio}, {property.ubicacion.departamento}
         </p>
@@ -23,9 +22,17 @@ export function Hero() {
         >
           Contactar
         </a>
-        <ImagePlaceholder
-          label="Foto aérea del terreno (pendiente)"
-          className="mt-8 h-72 w-full max-w-3xl rounded-lg"
+      </div>
+
+      <div className="relative aspect-video w-full overflow-hidden sm:aspect-[21/9]">
+        <video
+          className="h-full w-full object-cover"
+          src="/video/terreno-aereo.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-label="Vista aérea del terreno en Galapa, Atlántico"
         />
       </div>
     </section>
