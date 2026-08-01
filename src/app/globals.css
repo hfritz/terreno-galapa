@@ -131,3 +131,28 @@
     @apply font-sans;
   }
 }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate-glow {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.glow-border {
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    var(--accent-warm) 60deg,
+    transparent 120deg,
+    transparent 240deg,
+    var(--accent) 300deg,
+    transparent 360deg
+  );
+  animation: rotate-glow 4s linear infinite;
+}

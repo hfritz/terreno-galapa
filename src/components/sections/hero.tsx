@@ -31,14 +31,16 @@ export function Hero() {
             {property.viaFrente}, con potencial industrial, logístico y
             agropecuario.
           </p>
-          <Button
-            nativeButton={false}
-            className="border-white text-white hover:bg-white hover:text-foreground"
-            render={<a href="#contacto" />}
-          >
-            Solicitar información
-            <ArrowRight className="size-4" />
-          </Button>
+          <span className="glow-border relative inline-block p-[2px]">
+            <Button
+              nativeButton={false}
+              className="relative border-transparent bg-black/30 text-white hover:bg-white hover:text-foreground"
+              render={<a href="#contacto" />}
+            >
+              Solicitar información
+              <ArrowRight className="size-4" />
+            </Button>
+          </span>
         </div>
       </div>
     </section>
