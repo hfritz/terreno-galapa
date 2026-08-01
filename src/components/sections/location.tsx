@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { property } from "@/lib/property";
 
 export function Location() {
@@ -6,11 +5,12 @@ export function Location() {
     <section id="ubicacion" className="bg-secondary">
       <div className="grid sm:grid-cols-2">
         <div className="relative min-h-[420px] sm:min-h-[640px]">
-          <Image
-            src="/images/mapa-regional.png"
-            alt="Mapa regional mostrando la ubicación de Galapa respecto a Barranquilla y Soledad"
-            fill
-            className="object-cover"
+          <iframe
+            title="Mapa del terreno en Galapa, Atlántico"
+            src={`https://www.google.com/maps?q=${property.gps.lat},${property.gps.lng}&z=13&output=embed`}
+            className="absolute inset-0 h-full w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 

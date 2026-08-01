@@ -5,37 +5,41 @@ import { property } from "@/lib/property";
 
 export function Hero() {
   return (
-    <section className="bg-background">
-      <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9]">
-        <Nav />
-        <video
-          className="h-full w-full object-cover"
-          src="/video/terreno-aereo.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          aria-label="Vista aérea del terreno en Galapa, Atlántico"
-        />
-      </div>
-
-      <div className="mx-auto flex max-w-3xl flex-col items-start gap-6 px-6 py-16 sm:py-24">
-        <p className="text-sm text-muted-foreground">
-          {property.ubicacion.municipio}, {property.ubicacion.departamento}
-        </p>
-        <h1 className="font-heading max-w-2xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          {property.areaHectareas} hectáreas en el corredor de crecimiento de
-          Barranquilla
-        </h1>
-        <p className="max-w-xl text-lg text-muted-foreground">
-          Un terreno con {property.frenteMetros} metros de frente sobre la{" "}
-          {property.viaFrente}, con potencial industrial, logístico y
-          agropecuario.
-        </p>
-        <Button nativeButton={false} render={<a href="#contacto" />}>
-          Contactar
-          <ArrowRight className="size-4" />
-        </Button>
+    <section className="relative aspect-[4/5] w-full overflow-hidden bg-background sm:aspect-[16/9]">
+      <Nav />
+      <video
+        className="h-full w-full object-cover"
+        src="/video/terreno-aereo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-label="Vista aérea del terreno en Galapa, Atlántico"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-black/20" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-40 pb-12 sm:pb-16">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 text-center">
+          <p className="text-sm text-white/80">
+            {property.ubicacion.municipio}, {property.ubicacion.departamento}
+          </p>
+          <h1 className="font-heading text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            {property.areaHectareas} hectáreas en el corredor de crecimiento
+            de Barranquilla
+          </h1>
+          <p className="max-w-xl text-base text-white/85 sm:text-lg">
+            Un terreno con {property.frenteMetros} metros de frente sobre la{" "}
+            {property.viaFrente}, con potencial industrial, logístico y
+            agropecuario.
+          </p>
+          <Button
+            nativeButton={false}
+            className="border-white text-white hover:bg-white hover:text-foreground"
+            render={<a href="#contacto" />}
+          >
+            Solicitar información
+            <ArrowRight className="size-4" />
+          </Button>
+        </div>
       </div>
     </section>
   );
